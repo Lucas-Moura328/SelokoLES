@@ -1,0 +1,11 @@
+.aside-menu a {
+    color: white;
+    margin-bottom: 15px;
+}
+.aside-menu a:hover {
+    text-decoration: none;
+    color: #ccc;
+}
+.container {
+    margin-left: 270px;
+}

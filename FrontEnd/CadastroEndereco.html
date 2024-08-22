@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Endereço - SÉLOKO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+</head>
+<body style="background-color: #f0f0f0;">
+    <header>
+        <div class="logo">
+            <h1>SÉLOKO</h1>
+        </div>
+    </header>
+
+    <main class="container">
+      
+        <div class="row">
+            <div class="col-md-8 mx-auto order-md-1 rounded bg-white p-4">
+                <form class="needs-validation" id="create-address" method="POST" action="cadastroCliente.html" novalidate>
+                    <!-- Formulário de endereço -->
+                    <h4 class="mb-3">Dados do Endereço</h4>
+                    
+                    <div class="address-item">
+                        <div class="d-block my-3">
+                            <p class="mb-1">Tipo de endereço</p>
+                            <div class="custom-control custom-radio">
+                                <input id="eCobranca" name="type-Endereco[]" type="radio" class="custom-control-input" required>
+                                <label for="eCobranca" class="custom-control-label">Endereço de cobrança</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input id="eResidencia" name="type-Endereco[]" type="radio" class="custom-control-input" required>
+                                <label for="eResidencia" class="custom-control-label">Endereço de residência</label>
+                            </div>
+                        </div>
+
+                        <!-- Formulário do endereço -->
+                        <div class="row">
+                            <div class="col mb-2">
+                                <label for="res-type">Tipo de residência</label>
+                                <select name="res-type[]" class="form-control" required>
+                                    <option value="">Selecione uma opção</option>
+                                    <option value="1">Casa</option>
+                                    <option value="2">Casa Geminada</option>
+                                    <option value="3">Sobrado</option>
+                                    <option value="4">Apartamento</option>
+                                </select>
+                                <div class="invalid-feedback">Por favor, escolha.</div>
+                            </div>
+                            <div class="col mb-2">
+                                <label for="log-type">Tipo de Logradouro</label>
+                                <select name="log-type" class="form-control" required>
+                                    <option value="">Selecione uma opção</option>
+                                    <option value="">Selecione uma opção</option>
+                                            <option value="">Aeroporto</option>
+                                            <option value="">Alameda</option>
+                                            <option value="">Área</option>
+                                            <option value="">Avenida</option>
+                                            <option value="">Campo</option>
+                                            <option value="">Chácara</option>
+                                            <option value="">Colônia</option>
+                                            <option value="">Condomínio</option>
+                                            <option value="">Conjunto</option>
+                                            <option value="">Distrito</option>
+                                            <option value="">Esplanada</option>
+                                            <option value="">Estação</option>
+                                            <option value="">Estrada</option>
+                                            <option value="">Favela</option>
+                                            <option value="">Fazenda</option>
+                                            <option value="">Feira</option>
+                                            <option value="">Jardim</option>
+                                            <option value="">Ladeira</option>
+                                            <option value="">Lago</option>
+                                            <option value="">Lagoa</option>
+                                            <option value="">Largo</option>
+                                            <option value="">Loteamento</option>
+                                            <option value="">Morro</option>
+                                            <option value="">Núcleo</option>
+                                            <option value="">Parque</option>
+                                            <option value="">Passarela</option>
+                                            <option value="">Pátio</option>
+                                            <option value="">Praça</option>
+                                            <option value="">Quadra</option>
+                                            <option value="">Recanto</option>
+                                            <option value="">Residencial</option>
+                                            <option value="">Rodovia</option>
+                                            <option value="">Rua</option>
+                                            <option value="">Setor</option>
+                                            <option value="">Sítio</option>
+                                            <option value="">Travessa</option>
+                                            <option value="">Trecho</option>
+                                            <option value="">Trevo</option>
+                                            <option value="">Vale</option>
+                                            <option value="">Vereda</option>
+                                            <option value="">Via</option>
+                                            <option value="">Viaduto</option>
+                                            <option value="">Viela</option>
+                                            <option value="">Vila</option>
+                                </select>
+                                <div class="invalid-feedback">Por favor, escolha.</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col mb-2">
+                                <label for="log">Logradouro</label>
+                                <input type="text" name="log[]" id="log" class="form-control" required>
+                                <div class="invalid-feedback">Por favor, insira um logradouro.</div>
+                            </div>
+                            <div class="col mb-2">
+                                <label for="num">Número</label>
+                                <input type="number" name="num[]" id="num" size="2" class="form-control" required>
+                                <div class="invalid-feedback">Por favor, insira um número.</div>
+                            </div>
+                            <div class="col mb-2">
+                                <label for="bairro">Bairro</label>
+                                <input type="text" name="bairro[]" id="bairro" class="form-control" required>
+                                <div class="invalid-feedback">Por favor, insira um bairro.</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col mb-2">
+                                <label for="comp">Complemento</label>
+                                <input type="text" name="comp[]" id="comp" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" name="cidade[]" id="cidade" class="form-control" required>
+                                <div class="invalid-feedback">Por favor, insira uma cidade.</div>
+                            </div>
+                            <div class="col">
+                                <label for="uf">Estado</label>
+                                <select name="uf[]" id="uf" class="form-control" required>
+                                    <option value="">Selecione</option>
+                                    <option value="AC">AC</option>
+                                    <option value="SP">SP</option>
+                                </select>
+                                <div class="invalid-feedback">Por favor, selecione um estado.</div>
+                            </div>
+                            <div class="col">
+                                <label for="cep">CEP</label>
+                                <input type="text" name="cep[]" id="cep" placeholder="00.000-000" maxlength="9" class="form-control" required>
+                                <div class="invalid-feedback">Por favor, insira um CEP válido.</div>
+                            </div>
+                        </div>
+                        <hr class="mb-2">
+                    </div>
+                    
+                    <button class="btn btn-success btn-lg " id="submit-address" type="submit">Salvar Endereço</button>
+                    <a href="cadastroCliente.html" class="btn btn-outline-secondary btn-lg">Voltar ao Cadastro</a>
+                </form>
+
+                <!-- Link para voltar ao cadastro de cliente -->
+                <div class="text-center mt-4">
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    
+    <script src="scripts/footer.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="scripts/DesativarEnvioFormulario.js"></script>
+</body>
+</html>

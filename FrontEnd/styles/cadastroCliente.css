@@ -1,0 +1,32 @@
+.table-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.table-actions button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.btn-delete {
+    color: #e74c3c;
+}
+
+.btn-edit {
+    color: #f39c12;
+}
+
+.table-header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px 5px 0 0;
+}
+
+.table-container {
+    border: 1px solid #2c3e50;
+    border-radius: 5px;
+    overflow: hidden;
+}
