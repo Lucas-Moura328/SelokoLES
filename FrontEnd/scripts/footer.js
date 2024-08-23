@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Defina o conteúdo do footer
     const footerContent = `
-        <div class="container">
+        <div class="">
             <div class="row">
                 <!-- Seção Sobre Nós -->
                 <div class="col-12">

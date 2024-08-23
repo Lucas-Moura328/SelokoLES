@@ -26,7 +26,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-8 mx-auto order-md-1 rounded bg-white p-4">
+            <div class="col-md-8 mx-auto order-md-1 mb-5 rounded bg-white p-4">
                 <h4 class="my-3">Seus dados</h4>
                 <form class="needs-validation" id="create-client" method="" novalidate>
                     <div class="row">
@@ -132,6 +132,47 @@
                                     
                                 </tbody>
                             </table> 
+                    </fieldset>
+
+                    <fieldset id="card-items" class="mt-4">
+                        <h4 class="mb-3">Seus cartões</h4>
+                        <div class="row justify-content-between mb-3">
+                            <div class="col-6 my-auto"><span>Cartão</span></div>
+                            <div class="col-auto">
+                                <a class="btn btn-outline-secondary rounded-0" id="add-card" href="CadastroCartao.html">+Novo cartão</a>
+                            </div>
+                        </div>
+                        <hr class="mb-2">
+
+                        <div class="table-container">
+                            <table class="table table-bordered table-hover">
+                                <thead class="thead" style="background-color:#FDED8F;">
+                                    <tr>
+                                        <th>Cartão</th>
+                                        <th>Tipo</th>
+                                        <th>Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>**** **** **** 1234</td>
+                                        <td>Crédito</td>
+                                        <td class="table-actions">
+                                            <button class="btn-edit"><i class="fas fa-pencil-alt"></i></button>
+                                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>**** **** **** 5678</td>
+                                        <td>Débito</td>
+                                        <td class="table-actions">
+                                            <button class="btn-edit"><i class="fas fa-pencil-alt"></i></button>
+                                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </fieldset>
                     
                     <button class="btn btn-success btn-lg btn-block my-4" id="submit-client" type="submit">Salvar</button>
