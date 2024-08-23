@@ -1,4 +1,4 @@
-document.addEventListener('DomContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function(){
     const headerContent = `
     <div class="container d-flex justify-content-between align-items-center">
             <div class="logo">

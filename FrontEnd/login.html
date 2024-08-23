@@ -4,40 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - SÉLOKO</title>
+
+    <!-- Bootstrap 4.0.0 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles/login.css">
     <script src="https://kit.fontawesome.com/db67e134e0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="bg-light d-flex flex-column min-vh-100">
     <!-- Header -->
-    <header>
-        <div class="logo">
-            <h1>SÉLOKO</h1>
-        </div>
-    </header>
+    <header class="py-4"></header>
 
     <!-- Login Form -->
-    <main class="login-container">
-        <form class="login-form">
-            <h2>Login</h2>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+    <main class="login-container container flex-grow-1 d-flex align-items-center justify-content-center">
+        <div class="row justify-content-center w-100">
+            <div class="col-md-6 col-lg-4">
+                <form class="login-form p-4 border rounded bg-white shadow">
+                    <h2 class="text-center mb-4">Login</h2>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha:</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                    <p class="register-link text-center mt-3">Não tem uma conta? <a href="cadastroCliente.html">Cadastre-se</a></p>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit" class="btn">Entrar</button>
-            <p class="register-link">Não tem uma conta? <a href="cadastroCliente.html">Cadastre-se</a></p>
-        </form>
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer></footer>
+    <footer class="py-3">
+       
+    </footer>
+
+    <!-- jQuery (necessário para o Bootstrap 4.0.0) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+    <!-- Popper.js (necessário para o Bootstrap 4.0.0) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+    <!-- Bootstrap 4.0.0 JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <script src="script.js"></script>
     <script src="scripts/footer.js"></script>
+    <script src="scripts/HeaderWithoutSeachLogin.js"></script>
 </body>
 </html>

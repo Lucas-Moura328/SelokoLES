@@ -1,6 +1,6 @@
-document.addEventListener('DomContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function(){
     const headerContent = `
-    <div class="container d-flex justify-content-between align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
             <div class="logo">
                 <h1 class="m-0"><a href="index.html" class="text-white">SÉLOKO</a></h1>
             </div>
