@@ -1,12 +1,6 @@
-let clients = [
-    { nome: "Lucas Almeida Moura", cpf: "000.000.000-00", email: "lucas@exemplo.com", ativo: true },
-    { nome: "Maria Aparecida Silva", cpf: "111.111.111-11", email: "maria@exemplo.com", ativo: false },
-    { nome: "João Gomes Pereira", cpf: "222.222.222-22", email: "joao@exemplo.com", ativo: true },
-    { nome: "Lucas Almeida Moura", cpf: "333.333.333-33", email: "lucas2@exemplo.com", ativo: true },
-    { nome: "Maria Aparecida Silva", cpf: "444.444.444-44", email: "maria2@exemplo.com", ativo: false },
-    { nome: "João Gomes Pereira", cpf: "555.555.555-55", email: "joao2@exemplo.com", ativo: true }
+const url = "http://localhost:8080/clientes";
 
-];
+let clients = [];
 
 let clientToDeleteIndex = null;
 
@@ -60,9 +54,6 @@ function deleteClient() {
     }
 }
 
-
-
-
 function toggleStatus(event) {
     const clientIndex = event.target.getAttribute('data-index');
     clients[clientIndex].ativo = event.target.checked;
@@ -74,5 +65,18 @@ document.getElementById('confirmDeleteButton').addEventListener('click', () => {
     $('#confirmDeleteModal').modal('hide');
 });
 
-// Inicializar a tabela
-populateTable();
+async function getApi(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Erro ao buscar dados da API');
+        }
+        clients = await response.json(); // Atualiza a lista de clientes com os dados da API
+        populateTable(); // Repopula a tabela com os novos dados
+    } catch (error) {
+        console.error('Erro ao buscar os dados:', error);
+    }
+}
+
+// Inicializar a tabela com dados da API
+getApi(url);
