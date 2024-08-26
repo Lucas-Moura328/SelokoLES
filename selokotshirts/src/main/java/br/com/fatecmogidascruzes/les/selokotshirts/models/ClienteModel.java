@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.hateoas.RepresentationModel;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -15,7 +16,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Table(name = "Clientes")
-public class ClienteModel implements Serializable {
+public class ClienteModel extends RepresentationModel<ClienteModel> implements Serializable {
     private static final long serialVersionUID = 1l;
 
     @Id
