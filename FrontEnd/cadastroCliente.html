@@ -24,7 +24,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-8 mx-auto order-md-1 mb-5 rounded bg-white p-4">
+            <div class="col-md-8 mx-auto order-md-1 mb-5 shadow rounded bg-white p-4">
                 <h4 class="my-3">Seus dados</h4>
                 <form class="needs-validation" id="create-client" method="" novalidate>
                     <div class="row">
@@ -110,26 +110,12 @@
                                         <th>Ação</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Rua Exemplo, 000</td>
-                                        <td>Entrega</td>
-                                        <td class="table-actions">
-                                            <button class="btn-edit"><i class="fas fa-pencil-alt"></i></button>
-                                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Praça da Matriz, 33</td>
-                                        <td>Cobrança</td>
-                                        <td class="table-actions">
-                                            <button class="btn-edit"><i class="fas fa-pencil-alt"></i></button>
-                                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
-                                        </td>
-                                    </tr>
+                                <tbody tbody id="address-table-body">
+                              
                                     
                                 </tbody>
                             </table> 
+                        </div>    
                     </fieldset>
 
                     <fieldset id="card-items" class="mt-4">
@@ -151,24 +137,7 @@
                                         <th>Ação</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>**** **** **** 1234</td>
-                                        <td>Crédito</td>
-                                        <td class="table-actions">
-                                            <button class="btn-edit"><i class="fas fa-pencil-alt"></i></button>
-                                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>**** **** **** 5678</td>
-                                        <td>Débito</td>
-                                        <td class="table-actions">
-                                            <button class="btn-edit"><i class="fas fa-pencil-alt"></i></button>
-                                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
+                                <tbody id="card-table-body"></tbody>
                             </table>
                         </div>
                     </fieldset>
@@ -179,10 +148,32 @@
         </div>
     </main>
     <footer></footer>
+
+    <div class="modal fade" id="emptyTablesModal" tabindex="-1" role="dialog" aria-labelledby="emptyTablesModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="emptyTablesModalLabel">Atenção</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    As tabelas de endereços e/ou cartões estão vazias. Por favor, adicione pelo menos um endereço e um cartão antes de salvar.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="scripts/DesativarEnvioFormulario.js"></script>
     <script src="scripts/footer.js"></script>
     <script src="scripts/HeaderWithoutSeachLogin.js"></script>
+    <script src="scripts/CadastrarCliente.js"></script>
+    
 </body>
 </html>

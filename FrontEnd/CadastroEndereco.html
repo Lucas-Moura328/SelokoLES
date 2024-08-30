@@ -9,15 +9,15 @@
 </head>
 <body style="background-color: #f0f0f0;">
     <header>
-        <div class="logo">
-            <h1>SÉLOKO</h1>
+        <div class="py-5">
+            
         </div>
     </header>
 
     <main class="container">
       
         <div class="row">
-            <div class="col-md-8 mx-auto order-md-1 rounded bg-white p-4">
+            <div class="col-md-8 mx-auto bg-white rounded shadow p-4 my-5">
                 <form class="needs-validation" id="create-address" method="POST" action="cadastroCliente.html" novalidate>
                     <!-- Formulário de endereço -->
                     <h4 class="mb-3">Dados do Endereço</h4>
@@ -31,7 +31,7 @@
                             </div>
                             <div class="custom-control custom-radio">
                                 <input id="eResidencia" name="type-Endereco[]" type="radio" class="custom-control-input" required>
-                                <label for="eResidencia" class="custom-control-label">Endereço de residência</label>
+                                <label for="eResidencia" class="custom-control-label">Endereço de entrega</label>
                             </div>
                         </div>
 
@@ -167,5 +167,6 @@
     <script src="scripts/footer.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="scripts/DesativarEnvioFormulario.js"></script>
+    <script src="scripts/HeaderWithoutSeachLogin.js"></script>
 </body>
 </html>
