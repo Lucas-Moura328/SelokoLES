@@ -58,15 +58,16 @@ public class ClienteModel extends RepresentationModel<ClienteModel> implements S
     @Enumerated(EnumType.STRING)
     private GeneroModel genero;
 
-    @Getter
+    @Getter @Setter
     @Embedded
     private TelefoneModel telefone;
 
-    public void setTelefone(ClienteRecordDto clienteRecordDto) {
-        this.telefone = new TelefoneModel(clienteRecordDto);
+
+    /*public void setTelefone(ClienteRecordDto clienteRecordDto) {
+        this.telefone = new TelefoneModel(clienteRecordDto.ddd(), clienteRecordDto.telefone());
     }
 
     public void setTelefone(TelefoneModel telefone) {
         this.telefone = telefone;
-    }
+    }*/
 }

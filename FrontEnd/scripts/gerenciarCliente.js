@@ -15,7 +15,7 @@ function populateTable() {
         row.innerHTML = `
             <td>${client.nome}</td>
             <td>${client.cpf}</td>
-            <td>${client.email}</td>
+            <td>${client.email.email}</td>
             <td>
                 <label class="switch">
                     <input type="checkbox" class="toggle-status" data-index="${index}" ${switchChecked}>

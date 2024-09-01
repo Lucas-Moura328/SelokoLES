@@ -16,9 +16,9 @@ public class TelefoneModel {
 
     private String telefone;
 
-    public TelefoneModel(ClienteRecordDto clienteRecordDto) {
-        setDdd(clienteRecordDto.ddd());
-        setTelefone(clienteRecordDto.telefone());
+    public TelefoneModel(String ddd, String telefone) {
+        setDdd(ddd);
+        setTelefone(telefone);
     }
 
     public void setDdd(String ddd) {
