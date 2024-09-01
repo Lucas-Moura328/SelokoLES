@@ -1,6 +1,6 @@
 package br.com.fatecmogidascruzes.les.selokotshirts.repositories;
 
-import br.com.fatecmogidascruzes.les.selokotshirts.models.ClienteModel;
+import br.com.fatecmogidascruzes.les.selokotshirts.models.cliente.ClienteModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

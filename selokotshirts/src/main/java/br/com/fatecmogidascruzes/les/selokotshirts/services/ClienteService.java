@@ -1,6 +1,6 @@
 package br.com.fatecmogidascruzes.les.selokotshirts.services;
 
-import br.com.fatecmogidascruzes.les.selokotshirts.models.ClienteModel;
+import br.com.fatecmogidascruzes.les.selokotshirts.models.cliente.ClienteModel;
 import br.com.fatecmogidascruzes.les.selokotshirts.repositories.ClienteRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;

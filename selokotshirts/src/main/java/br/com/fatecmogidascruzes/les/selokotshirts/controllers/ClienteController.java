@@ -1,8 +1,7 @@
 package br.com.fatecmogidascruzes.les.selokotshirts.controllers;
 
 import br.com.fatecmogidascruzes.les.selokotshirts.dtos.ClienteRecordDto;
-import br.com.fatecmogidascruzes.les.selokotshirts.models.ClienteModel;
-import br.com.fatecmogidascruzes.les.selokotshirts.repositories.ClienteRepository;
+import br.com.fatecmogidascruzes.les.selokotshirts.models.cliente.ClienteModel;
 import br.com.fatecmogidascruzes.les.selokotshirts.services.ClienteService;
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
