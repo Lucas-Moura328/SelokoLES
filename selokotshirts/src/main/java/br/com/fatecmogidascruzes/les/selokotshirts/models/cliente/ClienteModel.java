@@ -1,6 +1,6 @@
 package br.com.fatecmogidascruzes.les.selokotshirts.models.cliente;
 
-import br.com.fatecmogidascruzes.les.selokotshirts.dtos.ClienteRecordDto;
+
 import br.com.fatecmogidascruzes.les.selokotshirts.models.cliente.contato.EmailModel;
 import br.com.fatecmogidascruzes.les.selokotshirts.models.cliente.contato.TelefoneModel;
 import jakarta.persistence.*;
@@ -58,7 +58,7 @@ public class ClienteModel extends RepresentationModel<ClienteModel> implements S
     @Enumerated(EnumType.STRING)
     private GeneroModel genero;
 
-    @Getter @Setter
+    @Getter
     @Embedded
     private TelefoneModel telefone;
 
@@ -66,8 +66,8 @@ public class ClienteModel extends RepresentationModel<ClienteModel> implements S
     /*public void setTelefone(ClienteRecordDto clienteRecordDto) {
         this.telefone = new TelefoneModel(clienteRecordDto.ddd(), clienteRecordDto.telefone());
     }
-
+*/
     public void setTelefone(TelefoneModel telefone) {
         this.telefone = telefone;
-    }*/
+    }
 }
