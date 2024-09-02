@@ -24,6 +24,9 @@ public class EnderecoService {
     public List<EnderecoModel> findAll() {
         return enderecoRepository.findAll();
     }
+    public List<EnderecoModel> findByIdCliente (UUID idCliente){
+        return /*enderecoRepository.findByCliente_id(idCliente);/*/ null;
+    }
     public Optional<EnderecoModel> findById(Long id) {
         return enderecoRepository.findById(id);
     }

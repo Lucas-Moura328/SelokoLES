@@ -47,6 +47,17 @@ public class EnderecoController {
         }
         return ResponseEntity.status(HttpStatus.OK).body(enderecoLists);
     }
+    @GetMapping("/Enderecos/{idCliente}")
+    public ResponseEntity<List<EnderecoModel>> listarEnderecosCliente(@PathVariable(value = "idCliente") UUID idCliente) {
+        List<EnderecoModel> enderecoLists = enderecoService.findByIdCliente(idCliente);
+        if (!enderecoLists.isEmpty()) {
+            /*for (EnderecoModel endereco : enderecoLists) {
+                Long id = endereco.getIdEndereco();
+                endereco.add(linkTo(methodOn(EnderecoController.class).listarUmEndereco(id)).withSelfRel());
+            }/*/
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(enderecoLists);
+    }
     @GetMapping("/Enderecos/{id}")
     public ResponseEntity<Object> listarUmEndereco(@PathVariable(value = "id") Long id) {
         Optional<EnderecoModel> enderecoO = enderecoService.findById(id);

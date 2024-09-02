@@ -46,11 +46,25 @@ function openDeleteModal(event) {
     $('#confirmDeleteModal').modal('show');
 }
 
-function deleteClient() {
+async function deleteClient() {
     if (clientToDeleteIndex !== null) {
-        clients.splice(clientToDeleteIndex, 1);
-        populateTable();
-        clientToDeleteIndex = null;
+        const clientId = clients[clientToDeleteIndex].idCliente; // Obtém o ID do cliente a ser excluído
+        try {
+            const response = await fetch(`${url}/${clientId}`, {
+                method: 'DELETE',
+            });
+
+            if (!response.ok) {
+                throw new Error('Erro ao excluir cliente');
+            }
+
+            // Se a exclusão for bem-sucedida, remove o cliente da lista local
+            clients.splice(clientToDeleteIndex, 1);
+            populateTable(); // Repopula a tabela
+            clientToDeleteIndex = null; // Reseta o índice do cliente a ser deletado
+        } catch (error) {
+            console.error('Erro ao excluir o cliente:', error);
+        }
     }
 }
 
@@ -67,7 +81,7 @@ document.getElementById('confirmDeleteButton').addEventListener('click', () => {
 
 async function getApi(url) {
     try {
-        const response = await fetch(url);
+        const response = await fetch(url, {method: "GET"});
         if (!response.ok) {
             throw new Error('Erro ao buscar dados da API');
         }
