@@ -16,7 +16,7 @@ import java.util.UUID;
 
 @Entity
 @Getter
-
+@AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "Enderecos")
 public class EnderecoModel extends RepresentationModel<EnderecoModel> implements Serializable {
@@ -49,24 +49,28 @@ public class EnderecoModel extends RepresentationModel<EnderecoModel> implements
     @Setter
     private boolean entrega;
 
-
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "clientes_id",nullable = false, updatable = false)
     private ClienteModel cliente;
 
     public EnderecoModel(@Valid EnderecoRecordDto endereco) {
         this.logradouro = endereco.logradouro();
+        this.complemento = endereco.complemento();
         this.numero = endereco.numero();
         this.bairro = endereco.bairro();
         this.estado = endereco.estado();
+        this.municipio = endereco.municipio();
         this.entrega = endereco.entrega();
-        setCliente(endereco.idCliente());
-
+        this.cep = endereco.cep();
+        this.cliente = new ClienteModel();
+        this.cliente.setIdCliente(endereco.idCliente());
     }
 
     public void setCliente(UUID idCliente) {
-        ClienteModel clienteModel = new ClienteModel();
-        cliente.setIdCliente(idCliente);
-        this.cliente = clienteModel;
+        if (this.cliente == null) {
+            this.cliente = new ClienteModel();
+        }
+        this.cliente.setIdCliente(idCliente);
     }
 }

@@ -70,19 +70,30 @@ public class ClienteModel extends RepresentationModel<ClienteModel> implements S
     @OneToMany(mappedBy = "cliente")
     private List<EnderecoModel> enderecos;
 
-    /*public ClienteModel (@Valid ClienteRecordDto clienteRecordDto){
-
-    }*/
-
-    /*public void setTelefone(ClienteRecordDto clienteRecordDto) {
-            this.telefone = new TelefoneModel(clienteRecordDto.ddd(), clienteRecordDto.telefone());
-        }
-    */
-    public void setTelefone(TelefoneModel telefone) {
-        this.telefone = telefone;
-    }
 
     public void setEnderecos(List<EnderecoRecordDto> enderecos) {
         this.enderecos = enderecos.stream().map(endereco -> new EnderecoModel(endereco)).collect(Collectors.toList());
     }
+
+    /*public ClienteModel (@Valid ClienteRecordDto clienteRecordDto){
+        this.nome = clienteRecordDto.nome();
+        this.cpf = clienteRecordDto.cpf();
+        this.dataNascimento = clienteRecordDto.dataNascimento();
+        this.senha = clienteRecordDto.senha();
+        this.ativo = clienteRecordDto.ativo();
+        this.genero = clienteRecordDto.genero();
+        this.telefone = clienteRecordDto.telefone();
+        setEnderecos(clienteRecordDto.enderecos());
+    }*/
+
+    /*public void setTelefone(ClienteRecordDto clienteRecordDto) {
+            this.telefone = new TelefoneModel(clienteRecordDto.ddd(), clienteRecordDto.telefone());
+        }*/
+    public void setTelefone(TelefoneModel telefone) {
+        this.telefone = telefone;
+    }
+
+    //public void setIdCliente(UUID idCliente) {
+    //    this.idCliente = idCliente;
+    //}
 }

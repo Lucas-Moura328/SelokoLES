@@ -18,6 +18,6 @@ public record ClienteRecordDto(@NotBlank String nome,
                                @NotNull EmailModel email,
                                @NotNull GeneroModel genero,
                                @NotNull TelefoneModel telefone,
-                               @NotNull List<EnderecoRecordDto> enderecos) {
+                               List<EnderecoRecordDto> enderecos) {
 
 }
