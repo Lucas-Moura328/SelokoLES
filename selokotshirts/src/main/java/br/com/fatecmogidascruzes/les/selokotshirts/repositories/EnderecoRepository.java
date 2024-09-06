@@ -11,6 +11,6 @@ import java.util.UUID;
 @Repository
 public interface EnderecoRepository extends JpaRepository<EnderecoModel, Long> {
 
-    /*List<EnderecoModel> findByCliente_id(UUID idCliente);/*/
+    List<EnderecoModel> findByCliente_IdCliente(UUID idCliente);
 
 }

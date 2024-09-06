@@ -75,7 +75,7 @@ public class ClienteModel extends RepresentationModel<ClienteModel> implements S
         this.enderecos = enderecos.stream().map(endereco -> new EnderecoModel(endereco)).collect(Collectors.toList());
     }
 
-    /*public ClienteModel (@Valid ClienteRecordDto clienteRecordDto){
+    public ClienteModel (@Valid ClienteRecordDto clienteRecordDto){
         this.nome = clienteRecordDto.nome();
         this.cpf = clienteRecordDto.cpf();
         this.dataNascimento = clienteRecordDto.dataNascimento();
@@ -84,7 +84,7 @@ public class ClienteModel extends RepresentationModel<ClienteModel> implements S
         this.genero = clienteRecordDto.genero();
         this.telefone = clienteRecordDto.telefone();
         setEnderecos(clienteRecordDto.enderecos());
-    }*/
+    }
 
     /*public void setTelefone(ClienteRecordDto clienteRecordDto) {
             this.telefone = new TelefoneModel(clienteRecordDto.ddd(), clienteRecordDto.telefone());

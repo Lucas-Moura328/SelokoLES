@@ -1,6 +1,8 @@
 package br.com.fatecmogidascruzes.les.selokotshirts.services;
 
+import br.com.fatecmogidascruzes.les.selokotshirts.models.cliente.ClienteModel;
 import br.com.fatecmogidascruzes.les.selokotshirts.models.endereco.EnderecoModel;
+import br.com.fatecmogidascruzes.les.selokotshirts.repositories.ClienteRepository;
 import br.com.fatecmogidascruzes.les.selokotshirts.repositories.EnderecoRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,8 @@ public class EnderecoService {
     @Autowired
     EnderecoRepository enderecoRepository;
 
+
+
     @Transactional
     public EnderecoModel saveEndereco(EnderecoModel enderecoModel) {
         return enderecoRepository.save(enderecoModel);
@@ -25,7 +29,7 @@ public class EnderecoService {
         return enderecoRepository.findAll();
     }
     public List<EnderecoModel> findByIdCliente (UUID idCliente){
-        return /*enderecoRepository.findByCliente_id(idCliente);/*/ null;
+        return enderecoRepository.findByCliente_IdCliente(idCliente);
     }
     public Optional<EnderecoModel> findById(Long id) {
         return enderecoRepository.findById(id);

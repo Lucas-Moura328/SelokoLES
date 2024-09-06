@@ -23,7 +23,7 @@ function populateTable() {
                 </label>
             </td>
             <td>
-                <a href="atualizarCliente.html" class="btn-edit"><i class="fas fa-pencil-alt"></i></a>
+                <a href="cadastroCliente.html?idCliente=${client.idCliente}" class="btn-edit"><i class="fas fa-pencil-alt"></i></a>
                 <button class="btn-delete" data-index="${index}"><i class="fas fa-trash"></i></button>
             </td>
         `;
